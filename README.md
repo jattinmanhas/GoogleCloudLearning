@@ -45,4 +45,6 @@ Here are some of the benefits of using GCP PoPs:
 - **Reliability:** PoPs can improve the reliability of Google Cloud services by providing redundancy in case of a network outage. This can be especially beneficial for mission-critical applications.
 - **Security:** PoPs can improve the security of Google Cloud services by providing physical security for the network infrastructure. This can help to protect customer data from unauthorized access.
 
+![Google POP](images/pop.png)
+
 
