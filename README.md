@@ -47,4 +47,58 @@ Here are some of the benefits of using GCP PoPs:
 
 ![Google POP](images/pop.png)
 
+## Zones, Regions and Multi-Regions
+In Google Cloud Platform (GCP), zones and regions are geographical concepts used to define the physical locations of resources and data centers within the GCP infrastructure.
 
+**Zones:** A zone is an isolated deployment area within a region. It represents a specific data center or cluster of data centers within a given region. Each zone is designed to be independent and isolated from failures in other zones, providing high availability and fault tolerance. Within a zone, you can deploy various resources such as virtual machine instances, disks, and network resources.
+
+**Regions:** A region is a specific geographical location where GCP resources are available. It is a broader concept than a zone and typically consists of multiple zones within close proximity to each other. Regions are designed to provide low-latency connectivity and high availability to customers and their users. Each region has a unique identifier and is composed of one or more zones.
+
+The primary purpose of zones and regions in GCP is to enable users to distribute their resources across different locations for better redundancy, fault tolerance, and disaster recovery. By spreading resources across multiple zones within a region, users can ensure that their applications and data remain available even if a zone or a specific data center experiences issues.
+
+**Multi-Regions:** A multi-region is a geographical grouping of multiple regions. It is designed to provide even higher availability and durability by distributing data and resources across a larger area. Multi-regions are ideal for applications and services that require global scalability, redundancy, and resilience.
+
+## Compute Service Options
+#### Compute Engine
+- Virutal Machines(VM's) called instances
+- Choose region and zone to deploy
+- We decide the operating system and the software of the instance
+- use public or private image to create instances
+- pre-configured images and software packages availabe in Google Cloud Marketplace
+- Manage Multiple instances using instance groups
+- Add/Remove capacity using autoscaling with instance groups
+- Attach/Detach disk as needed
+- Can be used with Google Cloud Storage
+- Use SSH to connect directly
+
+#### Google Kubernetes Engine
+- Container-orchestration system for automating deploying, scaling and managing containers
+- Built on Open-Source Kubernetes
+- Flexible to integrate with on-premise Kubernetes
+- A custer is a group of nodes or Compute Engine Instances -> It uses compute engine instances as nodes in cluster
+
+#### App Engine
+- Fully Managed Serverless platform for developing and hosting web applications at scale(PaaS)
+- Provisions Servers and scales the app instances based on demand
+- Build your app in Go, Java, .NET, PHP, Python or Ruby
+- Connect with other google services seemlessly and also provides options to connect with the 3rd party databases, cloud providers and 3rd party vendors
+- Integrates with Web Security Scanner to identify threats.
+
+#### Cloud Functions
+- Serverless execution environment for building and connecting cloud services
+- Simple, single-purpose functions that are attached to the events
+- Triggered when an event being watched is fired
+- Code executes in fully managed environment
+- Cloud Functions can be written in JS, Python 3, Go or Java Runtimes
+- Use Cases
+   - Data Processing or ETL operations(video Transcoding and IOT services)
+   - Webhooks to respont to HTTP triggers
+   - API's that compose loosely coupled logics
+   - Moblie backend functions
+
+#### Cloud Run
+- Fully Managed compute platform for deploying and scaling containerized applications quickly and securily
+- Abstracts away all infrastructure management
+- build on open standard Knative
+- Known as serverless for containers
+- Any language, any libarary or any binary
