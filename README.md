@@ -102,3 +102,110 @@ The primary purpose of zones and regions in GCP is to enable users to distribute
 - build on open standard Knative
 - Known as serverless for containers
 - Any language, any libarary or any binary
+
+## Storage Options
+#### Cloud Storage
+- Consistent, Scalable, Durable, Large-Capacity **object storage**.
+- Used for storing files and data and not for storage to be attached with instances
+- 11 9's durability
+- Unlimited Storage with no minimum object size
+- Used for content delivery, data lakes and backup
+- Available in different storage classes and availability
+- **Storage Classes**: 
+    - Standard : Maximum availability No limitations
+    - Nearline : Low cost archival storage -> accessed <1/mo
+    - Coldline : Even lower-cost archival storage -> accessed < 1/qtr
+    - Archive : Low-cost archival storage -> accessed <1/yr
+ - **Availability** : 
+     - Region : Single Region
+     - Dual-Region : Pair of regions
+     - Multi-Region : Large geographic area
+
+#### Filestore
+- Fully managed NFS file server
+- NFSv3 compliant
+- Store data from running applications
+- Use with VM instances and Kubernetes clusters
+
+#### Persistent Disks
+- Durable **block storage** for instances
+- Two Options: 
+    - Standard
+    - Solid State(SSD) -> higher iops
+
+
+## Database Options
+#### Relational Options
+
+- **Cloud SQL**
+    - Fully managed database service
+    - PostgreSQL, MySQL and SQL Server
+    - High availability across zones
+      
+ - **Cloud Spanner**
+      - Scalable relational database service
+      - Support transactions, strong consistency and synchronous replication
+      - High availability acroos regions and globally
+
+#### NoSQL
+- **Bigtable** 
+     - Fully Managed, scalable NoSQL database
+     - High throughput with low latency
+     - cluster resizing without downtime 
+
+- **Datastore**
+     - Fast, fully managed, serverless, NoSQL document database
+     - For mobile, web and IOT apps
+     - Multi-region replication
+     - ACID transactions
+
+- **Firestore**
+     - NoSQL, realtime database
+     - Optimized for offline use
+     - Cluster resizing without downtime
+
+- **Memorystore**
+     - Highly available in-memory service for Redis and Memcached
+     - Fully Managed
+   
+## Networking Services
+#### Virtual Private Cloud (VPC)
+- Virtualized network within Google Cloud
+- Core networking service
+- Global resource 
+- Each VPC contains a default network
+- Additional networks can be created in our project, but networks cannot be shared between projects
+
+#### Firewall rules
+- Govern traffic coming into instances on a network
+- Default network has a default set of firewall rules
+- Custom rules can be created
+
+#### Routes
+- Advanced networking functions for our instances
+- Specifying how packets leaving an instance should be directed
+
+#### Load Balancing
+- **HTTP(S) Load Balancing**
+       - Distribute traffic across regions to ensure that requests are routed to the closest region or in the event of a failure or over-capacity, to a healty instance to the next closest region.
+       - Distribure traffic based content type
+
+- **Network Load Balancing**
+       - Distribute traffic among server instances in the same region based on incoming IP protocol data, such as address, port and protocol
+
+#### Google Cloud DNS
+- Publish and maintain DNS records by using the same infrastructure that Google uses
+- Work with managed zones and DNS records through the CLI, APK or SDK
+
+#### Advanced Connectivity
+- **Cloud VPN**
+       - Connect your existing network to your VPC through IPsec connection.
+
+- **Direct Interconnect**
+       - Connect your existing network to your VPC using highly available, low-latency, enterprise-grade connection
+
+- **Direct Peering**
+       - Exchange internet traffic between your business network and Google at one of Google's borad-reaching edge network locations
+
+- **Carrier Peering**
+       - Connect your infrastructre to Google's network edge through higly available, lower-latency connections by using service providers
